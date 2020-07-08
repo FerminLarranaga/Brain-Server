@@ -25,7 +25,7 @@ const saveUser = (db, bcrypt) => (req, res) => {
         .then(trx.commit)
         .catch(trx.rollback)
     })
-    .catch(err => res.status(400).json("Error!"));
+    .catch(err => res.status(400).json("unable to register"));
 }
 
 module.exports = {
